@@ -7,11 +7,23 @@ COST is an acronym for the "Configuration that Outperforms a Single Thread", ind
 
 Specifically, this repository contains single-threaded implementations of three graph algorithms, [PageRank](http://en.wikipedia.org/wiki/PageRank), [label propagation](http://www.cs.cmu.edu/~ukang/papers/HalfpICDE2011.pdf), and [union-find](http://en.wikipedia.org/wiki/Disjoint-set_data_structure), supporting performance measurements taken on two graphs, [twitter_rv](http://an.kaist.ac.kr/traces/WWW2010.html) and [uk_2007_05](http://law.di.unimi.it/webdata/uk-2007-05/). The code is intended to be instructive, rather than a meaningful replacement for a graph-processing system.
 
+## Mac OSX Profiling
+Instead of mucking around the RUST code, I found that I can use the Mac Instruments tool to do accurate ms level profiling. 
+Steps are shown in the following:
+1. Open Instruments App
+2. create "Time Profifiler" target
+3. put in the COST arguments and easily run!
+
 ## Instructions
 
 Once cloned, the project can be built and run by typing
 ```
 cargo run --release
+```
+
+or just build using
+```
+cargo build --release
 ```
 which should result in usage information indicating appropriate arguments:
 ```

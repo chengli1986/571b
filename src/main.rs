@@ -134,7 +134,7 @@ fn main() {
 	}
 }
 
-fn stats<G: EdgeMapper>(graph: &G) -> u32{
+fn stats<G: EdgeMapper>(graph: &G) -> u32 {
     let mut max_x = 0;
     let mut max_y = 0;
     let mut edges = 0;
@@ -164,8 +164,7 @@ fn pagerank<G: EdgeMapper>(graph: &G, nodes: u32, alpha: f32)
     graph.map_edges(|x, _| { deg[x as usize] += 1f32 });
 
     for _iteration in (0 .. 20) {
-        //println!("Iteration: {} @Time: {}", _iteration, time::now());
-        println!("Iteration: {} @Time: ", _iteration);
+        println!("Iteration: {}", _iteration);
         for node in (0 .. nodes) {
             src[node as usize] = alpha * dst[node as usize] / deg[node as usize];
             dst[node as usize] = 1f32 - alpha;
