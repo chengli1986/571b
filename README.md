@@ -10,9 +10,10 @@ Specifically, this repository contains single-threaded implementations of three 
 ## Mac OSX Profiling
 Instead of mucking around the RUST code, I found that I can use the Mac Instruments tool to do accurate ms level profiling. 
 Steps are shown in the following:
-1. Open Instruments App
-2. create "Time Profifiler" target
-3. put in the COST arguments and easily run!
+*   Open Instruments App
+*   create "Time Profifiler" target
+*   put in the COST arguments and easily run!
+*   Watch out the # of cores running, only single core and single thread is allowed, no fancy HW threading, i.e. HT
 
 ## Instructions
 

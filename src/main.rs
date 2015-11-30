@@ -133,7 +133,7 @@ fn main() {
 		_parse_to_vertex(args.get_str("<from>"),args.get_str("<prefix>"))
 	}
 }
-
+// return value is unsigned integer 32-bit
 fn stats<G: EdgeMapper>(graph: &G) -> u32 {
     let mut max_x = 0;
     let mut max_y = 0;
